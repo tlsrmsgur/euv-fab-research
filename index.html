@@ -267,7 +267,7 @@ ol{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
     <tr><td>사진으로 잰 치수의 오차</td><td>원근·렌즈 왜곡으로 5~10% 틀릴 수 있음</td><td>정면에 가까운 사진만 사용, 아는 치수 2개 이상으로 교차 확인, 추정으로 표시</td></tr>
     <tr><td>EUV 광학계는 재현 불가</td><td>거울 곡면·위치는 공개된 적 없음</td><td>거울 개수와 빛 순서만 맞춘 개념 모델. "개념 재현" 이라고 명시</td></tr>
     <tr><td>부품 수 폭증</td><td>EFEM 하나가 350개. 팹 전체는 CATIA 가 느려짐</td><td>상세도 3단계 유지, 반복 장비는 한 번 만들어 복사 배치, 먼 장비는 단순 형상</td></tr>
-    <tr><td>못 찾은 숫자</td><td>OHT 레일 높이, 베이 폭, FOUP 무게, 장비별 유틸리티량</td><td>SEMI 규격 구하기, 사진 비율로 추정, 규칙표에서 바꾸기 쉽게 변수로 둠</td></tr>
+    <tr><td>못 찾은 숫자</td><td>OHT 레일 높이, 베이 폭, 장비별 유틸리티량 (FOUP 무게는 찾음)</td><td>SEMI 규격 구하기, 사진 비율로 추정, 규칙표에서 바꾸기 쉽게 변수로 둠</td></tr>
     <tr><td>유틸리티 배관 경로</td><td>장비마다 연결점 위치가 다르고 비공개</td><td>종류와 연결 관계 (어느 장비 → 어느 설비) 만 맞추고 경로는 자동 생성 규칙으로</td></tr>
     <tr><td>동작 시간 맞추기</td><td>EUV 220장/시간에 트랙·OHT 가 못 따라가면 어색함</td><td>가장 느린 단계부터 시간표를 짜고 나머지를 맞춤. 추정 시간은 표시</td></tr>
     <tr><td>지식재산·표기</td><td>실제 제품을 그대로 베낀 것처럼 보이면 문제</td><td>로고·상표 넣지 않기, "공개 자료 기반 개념 재현" 표기, 출처 목록 첨부</td></tr>
@@ -286,7 +286,9 @@ ol{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
     <tr><td>EUV 반입</td><td>상자 250개, 설치 약 14주</td><td><span class="g">기사</span></td><td><a href="https://www.tomshardware.com/tech-industry/semiconductors/intel-shares-biggest-unboxing-video-ever-as-asmls-dollar380-million-high-na-lithography-machine-is-installed-in-oregon-fab">Tom's Hardware (Intel 반입 영상)</a></td></tr>
     <tr><td>EUV 크기 (Low-NA NXE)</td><td>약 10 m 길이, 140~180 t</td><td><span class="g e">추정</span></td><td>기사마다 다름. 공식값 없음</td></tr>
     <tr><td>EUV 처리량</td><td>NXE:3800E 220 장/시간, 3600D 160 장/시간</td><td><span class="g o">공식</span></td><td><a href="https://asml.com/en/products/euv-lithography-systems/twinscan-nxe-3800e">ASML 제품 페이지</a></td></tr>
-    <tr><td>EUV 전력</td><td>대당 1.2~1.4 MW</td><td><span class="g e">추정</span></td><td><a href="https://www.eenewseurope.com/en/power-is-next-challenge-for-euv-lithography">eeNews</a></td></tr>
+    <tr><td>EUV 전력</td><td>Low-NA 약 1.2 MW (연 10.2 GWh), High-NA 약 1.4 MW (연 12.2 GWh)</td><td><span class="g">기사</span></td><td><a href="https://bits-chips.com/article/shining-brighter-a-10x-source-power-efficiency-boost-for-euv-lithography/">Bits&amp;Chips (TechInsights 인용)</a> · <a href="https://www.eenewseurope.com/en/power-is-next-challenge-for-euv-lithography">eeNews</a></td></tr>
+    <tr><td>EUV 광원 냉각수</td><td>약 1600 L/min (200 W 광원 기준, ArF 침지 75 L/min)</td><td><span class="g e">추정</span></td><td>Gigaphoton 2010 발표 인용. 오래된 값이라 배관 굵기 감 잡기용</td></tr>
+    <tr><td>FOUP 무게</td><td>빈 것 4.2~5.4 kg, 웨이퍼 25장 넣으면 7.3~8.2 kg (설계 하중 9 kg 로 잡기)</td><td><span class="g o">공식</span></td><td><a href="https://www.entegris.com/content/dam/product-assets/a300foups/datasheet-a300foups.pdf">Entegris A300 자료표</a> · <a href="https://www.entegris.com/content/dam/product-assets/spectrafoups/datasheet-spectrafoups.pdf">Entegris Spectra 자료표</a> · <a href="https://en.wikipedia.org/wiki/FOUP">Wikipedia (7~9 kg)</a></td></tr>
     <tr><td>EUV 1대당 오버레이 계측기</td><td>2~4대</td><td><span class="g">기사</span></td><td><a href="https://www.semi.org/en/blogs/semi-news/meeting-metrology-and-inspection-requirements-as-euvl-ramps-up-for-5nm-and-3nm">SEMI</a></td></tr>
     <tr><td>클린룸 높이</td><td>4.5 m (300mm 초기 권장) ~ 5 m 이상</td><td><span class="g">기사</span></td><td><a href="https://sst.semiconductor-digest.com/1999/11/future-300mm-fabs/">Solid State Technology 1999</a> · <a href="https://www.edn.com/breaking-through-fab-barriers/">EDN</a></td></tr>
     <tr><td>서브팹 높이</td><td>팹마다 최대 3.5 m 차이</td><td><span class="g">기사</span></td><td><a href="https://www.edn.com/breaking-through-fab-barriers/">EDN</a></td></tr>
@@ -296,7 +298,35 @@ ol{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
     <tr><td>EUV 수소 회수 유량</td><td>660 Nl/min, 수소 사용 최대 80% 절감</td><td><span class="g">기사</span></td><td><a href="https://www.edwardsvacuum.com/content/dam/brands/edwards-vacuum/edwards-website-assets/knowledge-and-insights/innovation-hub/documents/Hydrogen%20Recovery%20System%20as%20Published%20Semiconductor%20Digest.pdf">Edwards</a></td></tr>
     <tr><td>내장 계측 효과</td><td>층당 3~5시간 단축</td><td><span class="g">기사</span></td><td>TSMC·ASML SPIE 논문 (7-1 절)</td></tr>
   </table></div>
-  <p class="warn" style="margin-top:10px">아직 못 찾은 숫자: OHT 레일 높이, 베이·통로 폭, FOUP 무게 (규격 E47.1 원문은 유료), Low-NA EUV 공식 크기, 장비별 전력·냉각수·배기량. 이 값들은 추정으로 넣거나 SEMI 규격을 구해야 합니다.</p>
+  <h2 style="margin-top:18px">공개값이 없는 숫자: 추정값과 근거</h2>
+  <p class="note">아래는 공개 자료를 찾지 못해 다른 숫자에서 거꾸로 계산하거나 사진 비율로 잡은 값입니다. 규칙표에 변수로 두고, SEMI 규격이나 현장 확인으로 바꿀 것.</p>
+  <div class="tbl" style="margin-top:8px"><table>
+    <tr><th>항목</th><th>추정값</th><th>계산 근거</th><th>확인 방법</th></tr>
+    <tr><td>OHT 레일 높이 (바닥 → 레일 윗면)</td><td>약 3.5~3.8 m</td><td>로드포트 위 2600 mm 까지 비워야 함 (E15.1) → OHT 차량 바닥이 2.6 m 이상. 차량 높이 약 0.8~1.0 m (사진 비율, FOUP 높이 약 0.34 m 를 품음) + 레일·주행부 약 0.1~0.2 m</td><td>SEMI E15.1·E84 원문, Muratec·Daifuku 설치 사양</td></tr>
+    <tr><td>OHT 호이스트 내림 거리</td><td>약 1.7~2.0 m</td><td>차량 안 FOUP 바닥 높이 약 2.65 m − 로드포트 높이 0.9 m</td><td>위와 같음</td></tr>
+    <tr><td>베이 안 통로 폭 (로드포트 앞)</td><td>약 2.5~3.5 m</td><td>로드포트 앞 작업자·카트 통로 + 양쪽 장비 정비 문 여는 자리. 1999 SEMATECH 300mm 배치 그림 비율</td><td><a href="https://sst.semiconductor-digest.com/issue/?id=18740">SST 300mm 배치 논문</a> 그림에서 다시 재기</td></tr>
+    <tr><td>베이 폭 (장비 두 줄 + 통로)</td><td>약 10~14 m</td><td>양쪽 장비 깊이 3.5~5 m (트랙·클러스터 사진 비율) × 2 + 통로</td><td>장비별 깊이를 규칙표에 넣으면 자동 계산</td></tr>
+    <tr><td>Low-NA EUV 크기 (NXE)</td><td>약 10~12 × 4 × 3.5 m (팹 층 본체만)</td><td>High-NA 14×4×4 m 공식값에서 사진 비율로 줄임. 레이저(CO₂ 드라이버)는 서브팹에 따로</td><td>Intel·imec 설치 사진, ASML 설치 안내</td></tr>
+    <tr><td>트랙 (코터·디벨로퍼) 크기</td><td>약 6~8 × 3~4 × 2.6~3 m</td><td>중고 거래 사진의 사람 키 대비 비율 (아래 사진 표 Moov)</td><td>TEL 설치 도면 (비공개), 중고 매물 사양서</td></tr>
+    <tr><td>클러스터 식각·증착기 크기</td><td>약 3.5~5 × 3~4.5 × 2.5~3 m (EFEM 포함)</td><td>EFEM 깊이 약 1 m + 진공 이송실 + 챔버 4~6개 원형 배치 (그림 3)</td><td>제조사 페이지 사진, 중고 매물 사양서</td></tr>
+    <tr><td>클러스터 장비 1대 유틸리티</td><td>전력 수십~150 kVA, PCW 수십 L/min, 배기 여러 줄</td><td>챔버별 RF 전원·진공 펌프·스크러버를 서브팹에 둠. 장비마다 차이 큼</td><td>제조사 설치 자료 (비공개) → 범위값 변수로</td></tr>
+  </table></div>
+  <p class="warn" style="margin-top:10px">계산 근거의 "사진 비율" 값은 오차가 10% 이상일 수 있습니다. 배치·간섭 검토용이고 도면 치수로 쓰면 안 됩니다.</p>
+</section>
+
+<section>
+  <h2>장비 외형 사진·영상 (역설계 재료) <span class="tag">PHOTO</span></h2>
+  <p class="note">외형을 비율로 뽑으려면 정면·측면이 보이고 사람이나 FOUP 처럼 크기를 아는 물건이 같이 찍힌 사진이 좋습니다. 중고 장비 매물 사진은 실물이라 홍보 사진보다 쓸모가 큽니다. 사진은 모델링 참고용으로만 쓰고 공유 문서에 다시 올리지 말 것 (저작권).</p>
+  <div class="tbl" style="margin-top:8px"><table>
+    <tr><th>장비</th><th>사진·영상</th><th>볼 것</th></tr>
+    <tr><td>EUV 스캐너</td><td><a href="https://www.asml.com/en/news/media-library">ASML 미디어 라이브러리 (사진 내려받기, 출처 표기 조건)</a> · <a href="https://www.asml.com/en/products/euv-lithography-systems/twinscan-nxe-3600d">NXE:3600D 제품 페이지</a> · <a href="https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab">Making EUV: lab to fab</a> · <a href="https://www.tomshardware.com/tech-industry/semiconductors/intel-shares-biggest-unboxing-video-ever-as-asmls-dollar380-million-high-na-lithography-machine-is-installed-in-oregon-fab">Intel High-NA 반입 영상</a></td><td>본체 덮개 모양, 광원 위치, 웨이퍼·레티클 입구 방향</td></tr>
+    <tr><td>EUV 작동 원리 영상</td><td><a href="https://www.youtube.com/watch?v=MiUHjLxm3V0">Veritasium: EUV 기계 (영어 영상)</a> · <a href="https://www.youtube.com/watch?v=1JkzrR-hznE">CNBC: High-NA 안쪽 촬영</a> · <a href="https://gizmodo.com/you-must-stare-into-the-heart-of-the-400-million-machine-2000705100">Gizmodo: EUV 내부 영상 소개 기사</a></td><td>주석 방울 → 레이저 → 거울 순서, 진공 용기 크기</td></tr>
+    <tr><td>트랙 (코터·디벨로퍼)</td><td><a href="https://moov.co/marketplace/coaters-developers/tel-tokyo-electron/tel-tokyo-electronlithius-pro-z">Moov: TEL LITHIUS Pro Z 중고 매물 (실물 사진)</a> · <a href="https://www.environmental-expert.com/companies/tokyo-electron-limited-tel-28310/products/family-coaterdevelopers-lithius-series-266212">LITHIUS 시리즈 소개</a></td><td>로드포트 수, 블록 나눔 (반입·처리·노광기 연결부)</td></tr>
+    <tr><td>계측·검사</td><td><a href="https://www.hitachi-hightech.com/us/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html">Hitachi GT2000 CD-SEM</a> · <a href="https://kla.com/products/chip-manufacturing/defect-inspection-review">KLA 결함 검사 제품</a> · <a href="https://bbp.kla.com">KLA 광대역 플라즈마 검사 소개</a></td><td>로드포트 2개 + EFEM + 진공 시료실 구성, 제진대</td></tr>
+    <tr><td>식각</td><td><a href="https://www.appliedmaterials.com/us/en/product-library/centura-etch.html">AMAT Centura Etch</a> · <a href="https://www.appliedmaterials.com/us/en/product-library/sculpta.html">AMAT Centura Sculpta (EUV 패턴 보정)</a> · <a href="https://moov.co/marketplace/dry-plasma-etch/lam/lam-research-corporation-2300-kiyo-f/835ea777fe7348f791363a2fe38dfcf6">Moov: Lam 2300 Kiyo F 중고 매물</a></td><td>챔버 수·배치, 챔버 위 RF 상자, 아래 펌프 연결</td></tr>
+    <tr><td>OHT</td><td><a href="https://www.muratec-usa.com/products/overhead-hoist-transport-g3x-oht/">Muratec G3X OHT</a> · <a href="https://www.muratec-usa.com/product-lines/cleanroom-transport-systems">Muratec 클린룸 반송</a> · <a href="https://news.samsungsemiconductor.com/kr/tag/oht/">삼성반도체 뉴스룸 OHT 글·영상</a> · <a href="https://news.skhynix.co.kr/carrying-wafers/">SK하이닉스 뉴스룸: 웨이퍼 나르기</a></td><td>차량 길이·높이, 그리퍼, 레일 매다는 방식</td></tr>
+    <tr><td>FOUP</td><td><a href="https://www.entegris.com/content/dam/product-assets/a300foups/datasheet-a300foups.pdf">Entegris A300 자료표</a> · <a href="https://msesupplies.com/products/mse-pro-12-inch-front-opening-unified-pod-foup">MSE FOUP 제품 사진</a></td><td>손잡이·윗 플랜지 (OHT 가 잡는 곳), 바닥 위치 홈</td></tr>
+  </table></div>
 </section>
 
 <section>
